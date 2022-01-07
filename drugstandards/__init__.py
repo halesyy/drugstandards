@@ -7,7 +7,7 @@ import re
 from pkg_resources import Requirement, resource_filename
 
 dictionary_file = resource_filename(Requirement.parse("drugstandards"), "drugstandards/data/synonyms.dat")
-drugdict = pickle.load(open(dictionary_file, "rb")) 
+drugdict = pickle.load(open(dictionary_file, "rb"), encoding="latin1") 
 
 def create_drug_dictionary(filename):
     """ This function creates a drug dictionary of the form
